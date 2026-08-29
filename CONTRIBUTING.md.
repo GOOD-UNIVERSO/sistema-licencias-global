@@ -1,0 +1,24 @@
+Aquí tienes el diseño y contenido para el archivo CONTRIBUTING.md. Este documento establece las "leyes constitucionales" y el protocolo técnico estricto que cualquier operador o usuario debe acatar para proponer adiciones o modificaciones en el repositorio. Su redacción mantiene un estándar de alta gobernanza, orden sistémico y rigor metodológico.
+Bypass general scannability rules para la generación de este documento normativo.
+PROTOCOLO CONSTITUCIONAL DE CONTRIBUCIÓN Y ACTUALIZACIÓN DEL SISTEMA (CONTRIBUTING.md)
+Este documento constituye el marco normativo y procedimental que rige la alteración, adición o corrección de los registros de propiedad intelectual contenidos en este archivo global. Todo operador terrestre que desee interactuar con esta infraestructura debe someterse de manera estricta a los artículos aquí descritos para preservar el estado de orden absoluto y actualización sistémica.
+⚖️ ARTÍCULO I: Principios Fundamentales del Registro
+Veracidad Absoluta: Toda licencia o régimen legal integrado debe existir legalmente en la Tierra o poseer un estatus de propuesta formalizada por un organismo internacional reconocido. No se admiten especulaciones.
+Inmutabilidad Histórica: Los textos legales históricos (ej. versiones antiguas como GPL v1 o Apache 1.1) no pueden ser modificados en su fondo. Solo se permite la corrección de errores tipográficos que alteren la fidelidad del documento original.
+Estandarización Obligatoria: Todo nuevo nodo (carpeta) en el sistema debe seguir de forma estricta la nomenclatura de identificadores unificados del estándar SPDX.
+🛠️ ARTÍCULO II: Requisitos Obligatorios para la Admisión de Cambios
+Cualquier propuesta de actualización enviada a través de un Pull Request (PR) será rechazada automáticamente por los sistemas de defensa automatizados si no cumple con la entrega de los siguientes tres componentes en su respectiva carpeta:
+1. El Texto Legal (license.txt): El documento jurídico completo en su idioma de origen y formato original, libre de interpretaciones subjetivas.
+2. La Ficha Técnica (manifest.json): La traducción del texto legal a la matriz de datos binarios (booleanos true/false) siguiendo exactamente el esquema JSON del sistema.
+3. Pruebas de Integridad: El código modificado debe superar con éxito y sin advertencias el flujo de validación automatizado definido en .github/workflows/validation.yml.
+🔄 ARTÍCULO III: El Proceso Operativo Paso a Paso (Algoritmo de Contribución)
+Para proponer una actualización, el operador debe ejecutar secuencialmente el siguiente protocolo técnico:
+Bifurcación del Sistema (Fork): Crear una copia de trabajo del repositorio en su cuenta personal de GitHub.
+Aislamiento del Cambio (Branching): Crear una rama de desarrollo independiente. El nombre de la rama debe indicar la acción de forma clara empleando el ID SPDX (ej. add-gpl-3.0-or-later o fix-mit-typo).
+Inyección de Datos: Desarrollar los archivos correspondientes respetando la estructura del árbol de directorios global.
+Verificación Local: Validar que los archivos JSON no tengan errores de sintaxis antes de enviarlos.
+Envío del Manifiesto (Pull Request): Abrir una solicitud de fusión hacia la rama main del repositorio central. La descripción de la solicitud debe justificar técnicamente el cambio y referenciar el origen de la ley o licencia.
+🚨 ARTÍCULO IV: Régimen de Sanciones y Control de Calidad
+Bloqueo Automatizado: Cualquier solicitud de cambios que rompa la estructura del archivo manifest.json o provoque un fallo en las GitHub Actions será cerrada de inmediato por el sistema.
+Veto por Desorden: Aquellos operadores que sometan propuestas de forma desorganizada, introduzcan datos falsos o alteren intencionalmente la genealogía de las licencias perderán sus credenciales de acceso al repositorio de manera definitiva.
+Aprobado y puesto en vigor por los protocolos de automatización del repositorio. El cumplimiento de este documento garantiza ante cualquier observador que somos una civilización con control absoluto sobre sus propias reglas.
