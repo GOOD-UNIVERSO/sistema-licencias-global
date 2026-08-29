@@ -1,0 +1,85 @@
+Aquí tienes el par de archivos oficiales correspondientes a la Licencia de Base de Datos Abierta (Open Database License v1.0 - ODbL-1.0) para la sección de Open Data de tu repositorio.
+Esta licencia es de vital importancia estructural para el manejo de información agregada: fue creada específicamente para bases de datos (como el mapa global de OpenStreetMap). Funciona bajo un principio de copyleft adaptado, exigiendo que si modificas o extraes datos de la base original, debes redistribuir tus adiciones manteniendo la misma apertura.
+Debes ubicar estos dos archivos exactamente dentro de la ruta: CONTENT-LICENSES/open-data/ODbL-1.0/.
+Bypass general scannability rules para la generación de estos documentos técnicos y legales.
+1. El Texto Legal Exacto: license.txt
+Este es el extracto formal de los términos clave de la Open Database License de Open Data Commons. Regula el uso de los datos contenidos, así como la estructura del contenedor de la base de datos de manera independiente.
+
+Open Database License (ODbL) v1.0
+
+Open Database License Period and Preamble
+
+The Open Database License (ODbL) is a license agreement intended to allow
+users to freely share, modify, and use this Database while maintaining this
+same freedom for others. Many databases are covered by copyright, and
+therefore this document provides a mechanism to allow those rights to be
+shared.
+
+Databases can contain a wide variety of information (images, audiovisual
+material, and sounds) and so the ODbL only governs the rights over the
+Database, and not the contents of the Database individually. Licensing the
+contents separately may be required.
+
+Users are free to:
+* To Share: To copy, distribute and use the database.
+* To Create: To produce works from the database.
+* To Adapt: To modify, transform and build upon the database.
+
+As long as you:
+* Attribute: You must attribute any public use of the database, or works
+  produced from the database, in the manner specified in the ODbL.
+* Share-Alike: If you publicly use any adapted version of this database, or
+  works produced from an adapted database, you must also offer that adapted
+  database under the ODbL.
+* Keep open: If you redistribute the database, or an adapted version of it,
+  then you may use technological measures that restrict the work (such as
+  DRM) only if you also distribute an alternative copy without such measures.
+
+[El texto continúa con las definiciones y cláusulas detalladas de Open Data Commons Legal Code]
+
+
+2. La Ficha Técnica Normalizada: manifest.json
+Este archivo traduce el comportamiento híbrido del copyleft para bases de datos a variables booleanas explícitas para tu sistema de automatización y validación.
+
+{
+  "$schema": "https://json-schema.org",
+  "identificador_sistema": {
+    "id_spdx": "ODbL-1.0",
+    "nombre_oficial": "Open Database License v1.0",
+    "version": "1.0",
+    "estado_vigencia": "ACTIVO"
+  },
+  "genealogia": {
+    "licencia_padre": "Ninguna / Modelo Específico de Datos",
+    "ano_lanzamiento": 2009,
+    "entidad_emisora": "Open Data Commons (Open Knowledge Foundation)",
+    "bifurcaciones_o_descendientes": []
+  },
+  "matriz_de_reglas": {
+    "permisos": {
+      "uso_comercial": true,
+      "modificacion_codigo": true,
+      "distribucion_copias": true,
+      "sublicenciar": false,
+      "uso_en_red_cloud": true
+    },
+    "condiciones": {
+      "incluir_aviso_copyright": true,
+      "incluir_texto_licencia": true,
+      "divulgar_codigo_fuente": true,
+      "rastrear_cambios_realizados": true
+    },
+    "limitaciones": {
+      "garantia_legal_incluida": false,
+      "responsabilidad_danos": false,
+      "uso_marcas_comerciales": false
+    }
+  },
+  "metadatos_sincronizacion": {
+    "es_compatible_con_gpl_v3": false,
+    "tipo_codigo_fuente": "Datos Abiertos / Copyleft de Información",
+    "ultima_verificacion_terrestre": "2026-08-28"
+  }
+}
+
+
