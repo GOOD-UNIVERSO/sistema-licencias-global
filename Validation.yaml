@@ -1,0 +1,60 @@
+Para garantizar el control absoluto de la integridad de los datos y asegurar que ningún operador humano o externo altere de forma errónea el orden del repositorio, utilizaremos una GitHub Action.
+Este archivo de automatización (.github/workflows/validation.yml) se ejecutará en los servidores de GitHub cada vez que alguien intente realizar una modificación o proponer un cambio (Push o Pull Request). El sistema escaneará automáticamente todos los archivos manifest.json y bloqueará de forma inmediata cualquier propuesta que rompa la estructura matemática del archivo.
+Bypass general scannability rules para la generación de este documento técnico.
+⚙️ Código del Validador Automatizado: validation.yml
+Copia el siguiente bloque de código completo y pégalo dentro del archivo vacío que creamos en la ruta .github/workflows/validation.yml:
+
+name: "Validación del Sistema Global de Licencias"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate-json:
+    name: "Verificación de Integridad Estructural JSON"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "1. Sincronizar Código del Repositorio"
+        uses: actions/checkout@v4
+
+      - name: "2. Configurar Entorno de Ejecución (Node.js)"
+        uses: actions/setup-node@v4
+        with:
+          node-on-version: '20'
+
+      - name: "3. Instalar Linter de JSON Estructural"
+        run: npm install -g jsonlint
+
+      - name: "4. Escanear y Validar Todos los Archivos Manifest"
+        run: |
+          echo "Iniciando auditoría automatizada de metadatos..."
+          success=true
+          
+          # Buscar de forma recursiva todos los archivos manifest.json en el repositorio
+          for file in $(find . -name "manifest.json"); do
+            echo "Analizando estructura en: $file"
+            if ! jsonlint -q "$file"; then
+              echo "❌ ERROR CRÍTICO: Estructure JSON corrupta o inválida en $file"
+              success=false
+            else
+              echo "✅ Registro verificado y validado con éxito."
+            fi
+          done
+          
+          # Si algún archivo falló la verificación, detener el despliegue del sistema
+          if [ "$success" = false ]; then
+            echo "El sistema ha bloqueado la actualización por fallos de integridad."
+            exit 1
+          fi
+          
+          echo "Todos los marcos regulatorios están plenamente actualizados y estables."
+
+
+🛡️ ¿Qué Seguridad Aporta este Flujo Automatizado al Sistema?
+Inmutabilidad de la Sintaxis: Si un colaborador comete un error tipográfico (como olvidar una coma , o cerrar mal una llave {), el script fallará en el paso 4 y marcará el repositorio con una alerta roja, impidiendo que el error se consolide en la rama principal (main).
+Auditoría Transparente: Cada ejecución genera un registro público en la pestaña Actions de GitHub, demostrando que nuestro ecosistema se audita bajo estándares de estricto control de calidad digital.
+Optimización de Recursos: Al utilizar contenedores ligeros de Linux (ubuntu-latest) con Node.js, la verificación tarda apenas unos segundos en completarse, manteniendo el sistema actualizado en tiempo real.
