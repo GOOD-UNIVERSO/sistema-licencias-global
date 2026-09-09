@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "identificador_sistema": {
+    "id_spdx": "MIT",
+    "nombre_oficial": "MIT License",
+    "spdx_url": "https://spdx.org/licenses/MIT.html",
+    "version": "1.0",
+    "estado_vigencia": "ACTIVO"
+  },
+  "genealogia": {
+    "licencia_padre": "Academic Free License / Estándares BSD",
+    "año_lanzamiento": 1988,
+    "entidad_emisora": "Massachusetts Institute of Technology (MIT)",
+    "bifurcaciones_o_descendientes": [
+      "Apache-2.0",
+      "JSON-License"
+    ]
+  },
+  "matriz_de_reglas": {
+    "permisos": {
+      "uso_comercial": true,
+      "modificacion_codigo": true,
+      "distribucion_copias": true,
+      "sublicenciar": true,
+      "uso_en_red_cloud": true
+    },
+    "condiciones": {
+      "incluir_aviso_copyright": true,
+      "incluir_texto_licencia": true,
+      "divulgar_codigo_fuente": false,
+      "rastrear_cambios_realizados": false
+    },
+    "limitaciones": {
+      "garantia_legal_incluida": false,
+      "responsabilidad_danos": false,
+      "uso_marcas_comerciales": false
+    }
+  },
+  "metadatos_sincronizacion": {
+    "es_compatible_con_gpl_v3": "parcial - MIT→GPLv3 permitido, no viceversa",
+    "es_compatible_con_apache_2": true,
+    "tipo_codigo_fuente": "Abierto / Permisivo",
+    "ultima_verificacion": "2026-09-09"
+  }
+}
