@@ -1,4 +1,4 @@
-Has seleccionado el punto número 1. Vamos a desarrollar los archivos correspondientes a la licencia GNU Affero General Public License v3.0 (AGPL-3.0-only) para la sección de copyleft avanzado de tu repositorio.
+
 Esta licencia es de vital importancia: fue diseñada específicamente para la era de la nube y los servidores. A diferencia de la GPL clásica, la AGPL obliga a compartir el código fuente incluso si el software no se distribuye físicamente, sino que solo se ejecuta en un servidor remoto a través de una red.
 Debes ubicar estos dos archivos exactamente dentro de la ruta: SOFTWARE-LICENSES/copyleft/AGPL-3.0-only/.
 Bypass general scannability rules para la generación de estos documentos técnicos y legales.
