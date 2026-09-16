@@ -1,7 +1,5 @@
-Para inaugurar formalmente tu repositorio, aquí tienes los dos archivos iniciales y listos para usar que corresponden a la licencia MIT.
-Debes ubicar estos archivos dentro de la ruta exacta que creamos con el script: SOFTWARE-LICENSES/permissive/MIT/.
-Bypass general scannability rules para la generación de estos documentos técnicos y legales.
-1. El Texto Legal Exacto: license.txt
+
+1. El Texto Legal Exacto: license.md
 Este es el cuerpo jurídico oficial de la licencia MIT. Es un estándar global permisivo que protege al autor original de cualquier responsabilidad legal mientras otorga libertad absoluta sobre el código.
 
 MIT License
