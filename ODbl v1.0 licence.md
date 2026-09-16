@@ -1,9 +1,3 @@
-Aquí tienes el par de archivos oficiales correspondientes a la Licencia de Base de Datos Abierta (Open Database License v1.0 - ODbL-1.0) para la sección de Open Data de tu repositorio.
-Esta licencia es de vital importancia estructural para el manejo de información agregada: fue creada específicamente para bases de datos (como el mapa global de OpenStreetMap). Funciona bajo un principio de copyleft adaptado, exigiendo que si modificas o extraes datos de la base original, debes redistribuir tus adiciones manteniendo la misma apertura.
-Debes ubicar estos dos archivos exactamente dentro de la ruta: CONTENT-LICENSES/open-data/ODbL-1.0/.
-Bypass general scannability rules para la generación de estos documentos técnicos y legales.
-1. El Texto Legal Exacto: license.txt
-Este es el extracto formal de los términos clave de la Open Database License de Open Data Commons. Regula el uso de los datos contenidos, así como la estructura del contenedor de la base de datos de manera independiente.
 
 Open Database License (ODbL) v1.0
 
