@@ -32,48 +32,6 @@ As long as you:
 [El texto continúa con las definiciones y cláusulas detalladas de Open Data Commons Legal Code]
 
 
-2. La Ficha Técnica Normalizada: manifest.json
-Este archivo traduce el comportamiento híbrido del copyleft para bases de datos a variables booleanas explícitas para tu sistema de automatización y validación.
 
-{
-  "$schema": "https://json-schema.org",
-  "identificador_sistema": {
-    "id_spdx": "ODbL-1.0",
-    "nombre_oficial": "Open Database License v1.0",
-    "version": "1.0",
-    "estado_vigencia": "ACTIVO"
-  },
-  "genealogia": {
-    "licencia_padre": "Ninguna / Modelo Específico de Datos",
-    "ano_lanzamiento": 2009,
-    "entidad_emisora": "Open Data Commons (Open Knowledge Foundation)",
-    "bifurcaciones_o_descendientes": []
-  },
-  "matriz_de_reglas": {
-    "permisos": {
-      "uso_comercial": true,
-      "modificacion_codigo": true,
-      "distribucion_copias": true,
-      "sublicenciar": false,
-      "uso_en_red_cloud": true
-    },
-    "condiciones": {
-      "incluir_aviso_copyright": true,
-      "incluir_texto_licencia": true,
-      "divulgar_codigo_fuente": true,
-      "rastrear_cambios_realizados": true
-    },
-    "limitaciones": {
-      "garantia_legal_incluida": false,
-      "responsabilidad_danos": false,
-      "uso_marcas_comerciales": false
-    }
-  },
-  "metadatos_sincronizacion": {
-    "es_compatible_con_gpl_v3": false,
-    "tipo_codigo_fuente": "Datos Abiertos / Copyleft de Información",
-    "ultima_verificacion_terrestre": "2026-08-28"
-  }
-}
 
 
