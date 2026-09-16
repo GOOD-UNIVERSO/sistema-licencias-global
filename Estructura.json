@@ -1,4 +1,4 @@
-ROOT[Matriz Legal: Propiedad Intelectual] --> CR[Copyright Tradicional: Todo reservado]
+eROOT[Matriz Legal: Propiedad Intelectual] --> CR[Copyright Tradicional: Todo reservado]
 ROOT --> CO[Copyleft / Cultura Libre: Derechos compartidos]
 
 CO --> PER[Línea Permisiva / Académica]
