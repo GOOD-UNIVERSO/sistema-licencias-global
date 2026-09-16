@@ -99,9 +99,9 @@ Usted puede agregar su propia declaración de derechos de autor a sus modificaci
 FIN DE LOS TÉRMINOS Y CONDICIONES
 Cómo aplicar la Licencia Apache a su trabajo 
 Incluya una copia de la Licencia Apache, normalmente en un archivo llamado LICENSE, en su trabajo, y considere también incluir un archivo NOTICE que haga referencia a la Licencia.
-Para aplicar la Licencia Apache a archivos específicos de su trabajo, adjunte la siguiente declaración estándar, reemplazando los campos entre corchetes "[]" con su propia información de identificación. (¡No incluya los corchetes!). Incluya el texto en la sintaxis de comentarios adecuada para el formato del archivo. También recomendamos incluir el nombre del archivo o clase y una descripción de su propósito en la misma página que el aviso de derechos de autor para facilitar su identificación en archivos de terceros.
-Copyright [yyyy] [name of copyright owner]
-
+Para aplicar la Licencia Apache a archivos específicos de su trabajo, adjunte la siguiente declaración estándar, reemplazando los campos entre corchetes "Dandhy Esparza Barajas®" con su propia información de identificación. . Incluya el texto en la sintaxis de comentarios adecuada para el formato del archivo. También recomendamos incluir el nombre del archivo o clase y una descripción de su propósito en la misma página que el aviso de derechos de autor para facilitar su identificación en archivos de terceros.
+Copyright 2026 GOOD-UNIVERSO|SOL® Dandhy Esparza Barajas®
+https://github.com/GOOD-UNIVERSO/
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
