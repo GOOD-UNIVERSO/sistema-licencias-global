@@ -1,0 +1,43 @@
+
+cat << 'EOF' > .gitignore
+# ==========================================================================
+# PROTOCOLO DE EXCLUSIÓN DE METADATOS Y ARCHIVOS TEMPORALES
+# DESARROLLADOR PRINCIPAL: Dandhyesparza barajas EABD
+# ==========================================================================
+
+# Archivos del Sistema Operativo (Rastros Locales)
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Configuraciones de Entornos de Desarrollo e IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Archivos de Registro y Caché del Sistema
+*.log
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de Automatización Locales de GitHub
+.node_modules/
+node_modules/
+
+# ==========================================================================
+# FILTRO DE PRIVACIDAD ASEGURADO POR EL DESARROLLADOR EABD - AÑO 2026
+# ==========================================================================
+EOF
+echo "Archivo .gitignore inyectado correctamente bajo la autoría de Dandhyesparza barajas EABD."
+
+
