@@ -1,4 +1,4 @@
-name: "Validación del Sistema Global de Licencias"
+name: "Validación del Sistema Global de Licencias".yml
 
 on:
   push:
