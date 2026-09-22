@@ -96,7 +96,7 @@ Los derechos de cada usuario están protegidos por dos mecanismos: (1) una decla
     "proximo_revision": "2027-09-09",
     "mantenedor": "Free Software Foundation (FSF)",
     "validador": "GOOD-UNIVERSO"
-  },
+  }, DandhyEsparzaBarajas 
   "licencia": {
     "id_spdx": "GPL-3.0-or-later",
     "nombre_oficial": "GNU General Public License v3.0 o posterior",
