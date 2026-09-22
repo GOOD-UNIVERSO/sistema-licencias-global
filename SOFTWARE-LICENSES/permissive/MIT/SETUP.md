@@ -38,7 +38,7 @@ To verify the license is readable:
 ```bash
 head -5 LICENSE
 # Should show: MIT License
-#              Copyright (c) 2026 Your Company
+#              Copyright (c) 2026  GOOD-UNIVERSO|SOL®
 ```
 
 ---
@@ -52,7 +52,7 @@ Copyright (c) 2026 Sistema Global de Licencias Terrestres
 
 To:
 ```
-Copyright (c) [YEAR] [YOUR NAME OR ORGANIZATION]
+Copyright (c) 2026 Dandhy Esparza Barajas|GOOD-UNIVERSO®
 ```
 
 **Everything else stays the same.**
