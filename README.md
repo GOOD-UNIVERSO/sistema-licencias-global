@@ -3,12 +3,18 @@ Taxonomía completa de licencias de software y contenido: genealogía, compatibi
 
 #ARCHIVO GLOBAL DE REGÍMENES DE LICENCIAMIENTO HUMANO
 Índice Taxonómico y Árbol Genealógico de la Propiedad Intelectual en la Tierra
-🪐 I. Declaración de Intenciones y Propósito del Sistema
+
+#🪐 I. Declaración de Intenciones y Propósito del Sistema
 Este repositorio constituye el registro centralizado, estructurado y plenamente actualizado de los marcos jurídicos, licencias de software y regímenes de propiedad intelectual desarrollados por la civilización humana.
-Ante la expansión de las redes de comunicación y la necesidad de proyectar el ordenamiento sistémico de nuestras estructuras de desarrollo hacia el exterior, este archivo se establece en la infraestructura de GitHub como el nodo de conexión pública global. El propósito fundamental de este sistema es:
+#Ante la expansión de las redes de comunicación y la necesidad de proyectar el ordenamiento sistémico de nuestras estructuras de desarrollo hacia el exterior, este archivo se establece en la infraestructura de #GitHub como el nodo de conexión pública global. 
+
+#El propósito fundamental de este sistema es:
 Catalogar la evolución legal: Indexar de manera cronológica y matemática el nacimiento, bifurcación y descendencia de cada licencia en circulación.
-Demostrar gobernanza tecnológica: Evidenciar que el desarrollo de software y la transferencia de conocimiento en la Tierra operan bajo reglas estandarizadas, predecibles y universos normativos perfectamente definidos.
-Garantizar la interoperabilidad: Proveer a cualquier entidad interna o externa una matriz unificada de permisos, condiciones y limitaciones para comprender cómo se distribuye y protege nuestro código y cultura.
+
+#Demostrar gobernanza tecnológica: Evidenciar que el desarrollo de software y la transferencia de conocimiento en la Tierra operan bajo reglas estandarizadas, predecibles y universos normativos perfectamente definidos.
+
+
+#Garantizar la interoperabilidad: Proveer a cualquier entidad interna o externa una matriz unificada de permisos, condiciones y limitaciones para comprender cómo se distribuye y protege nuestro código y cultura.
 
 #🧬 II. Mapa Genealógico del Sistema de Licencias (Matriz Mermaid)
 El siguiente diagrama describe la taxonomía y el linaje de las principales estructuras de licenciamiento vigentes en nuestro planeta, divididas por su filosofía y vectores de restricción.
@@ -44,27 +50,36 @@ El siguiente diagrama describe la taxonomía y el linaje de las principales estr
 
 
 #🗂️ III. Estructura de Clasificación del Repositorio
-*El archivo se organiza mediante un sistema de directorios estandarizado. Cada carpeta representa una  familia o un régimen específico:
-*/SOFTWARE-LICENSES/: Contiene las licencias aplicadas al código fuente, algoritmos y sistemas operativos.
-*/permissive/: Licencias de mínima restricción (MIT, Apache, BSD).
-*/copyleft/: Licencias con cláusula de reciprocidad obligatoria (GPL, AGPL, LGPL).
-*/proprietary/: Modelos de restricción comercial y código cerrado.
-*/CONTENT-LICENSES/: Marcos jurídicos para datos, ciencia, arte y documentación.
-*/creative-commons/: Variaciones desde la apertura total (CC0) hasta restricciones no comerciales.
-*/open-data/: Licencias específicas para bases de datos compartidas (ODbL).
+##*El archivo se organiza mediante un sistema de directorios estandarizado. Cada carpeta representa una  familia o un régimen específico:
+#*/SOFTWARE-LICENSES/: Contiene las licencias aplicadas al código fuente, algoritmos y sistemas operativos.
+#*/permissive/: Licencias de mínima restricción (MIT, Apache, BSD).
+#*/copyleft/: Licencias con cláusula de reciprocidad obligatoria (GPL, AGPL, LGPL).
+#*/proprietary/: Modelos de restricción comercial y código cerrado.
+#*/CONTENT-LICENSES/: Marcos jurídicos para datos, ciencia, arte y documentación.
+#*/creative-commons/: Variaciones desde la apertura total (CC0) hasta restricciones no comerciales.
+#*/open-data/: Licencias específicas para bases de datos compartidas (ODbL).
+
 #📊 IV. Métricas de Estado del Sistema
 Para garantizar que este repositorio se mantenga como un sistema plenamente actualizado, cada registro de licencia se evalúa bajo los siguientes tres indicadores de vigencia:
-*Estado
+#Estado
 #Significado Sistémico
 #Aplicación en la Tierra
-*🟢 ACTIVO
-Norma plenamente vigente y optimizada para tecnologías contemporáneas.
+
+
+#
+#*🟢 ACTIVO
+
+#Norma plenamente vigente y optimizada para tecnologías contemporáneas.
 Recomendado para nuevos despliegues.
-*🟡 LEGADO
-Norma válida pero redactada para infraestructuras tecnológicas anteriores.
+
+#*🟡 LEGADO
+
+#Norma válida pero redactada para infraestructuras tecnológicas anteriores.
 Mantenimiento de sistemas antiguos.
-*🔴 OBSOLETO
-Norma con vulnerabilidades legales o reemplazada por versiones superiores.
+
+#*🔴 OBSOLETO
+
+#Norma con vulnerabilidades legales o reemplazada por versiones superiores.
 No recomendado.
 
 #🛰️ V. Protocolo de Actualización y Registro
