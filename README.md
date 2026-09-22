@@ -1,6 +1,7 @@
 # sistema-licencias-global
-Taxonomía completa de licencias de software y contenido: genealogía, compatibilidad, fichas técnicas y mapeos visuales
-ARCHIVO GLOBAL DE REGÍMENES DE LICENCIAMIENTO HUMANO
+Taxonomía completa de licencias de software y contenido: genealogía, compatibilidad, fichas técnicas y mapeos visuales#
+
+#ARCHIVO GLOBAL DE REGÍMENES DE LICENCIAMIENTO HUMANO
 Índice Taxonómico y Árbol Genealógico de la Propiedad Intelectual en la Tierra
 🪐 I. Declaración de Intenciones y Propósito del Sistema
 Este repositorio constituye el registro centralizado, estructurado y plenamente actualizado de los marcos jurídicos, licencias de software y regímenes de propiedad intelectual desarrollados por la civilización humana.
@@ -8,10 +9,12 @@ Ante la expansión de las redes de comunicación y la necesidad de proyectar el 
 Catalogar la evolución legal: Indexar de manera cronológica y matemática el nacimiento, bifurcación y descendencia de cada licencia en circulación.
 Demostrar gobernanza tecnológica: Evidenciar que el desarrollo de software y la transferencia de conocimiento en la Tierra operan bajo reglas estandarizadas, predecibles y universos normativos perfectamente definidos.
 Garantizar la interoperabilidad: Proveer a cualquier entidad interna o externa una matriz unificada de permisos, condiciones y limitaciones para comprender cómo se distribuye y protege nuestro código y cultura.
-🧬 II. Mapa Genealógico del Sistema de Licencias (Matriz Mermaid)
+
+#🧬 II. Mapa Genealógico del Sistema de Licencias (Matriz Mermaid)
 El siguiente diagrama describe la taxonomía y el linaje de las principales estructuras de licenciamiento vigentes en nuestro planeta, divididas por su filosofía y vectores de restricción.
 
-graph TD
+#graph TD
+
     classDef default fill:#14191f,stroke:#30363d,stroke-width:2px,color:#c9d1d9;
     classDef active fill:#1a3222,stroke:#238636,stroke-width:2px,color:#7ee787;
     classDef legacy fill:#382716,stroke:#9e6a03,stroke-width:2px,color:#f2cc60;
@@ -40,30 +43,30 @@ graph TD
     CC --> CCBY[CC BY 4.0: Atribución Internacional]:::active
 
 
-🗂️ III. Estructura de Clasificación del Repositorio
-El archivo se organiza mediante un sistema de directorios estandarizado. Cada carpeta representa una familia o un régimen específico:
-/SOFTWARE-LICENSES/: Contiene las licencias aplicadas al código fuente, algoritmos y sistemas operativos.
-/permissive/: Licencias de mínima restricción (MIT, Apache, BSD).
-/copyleft/: Licencias con cláusula de reciprocidad obligatoria (GPL, AGPL, LGPL).
-/proprietary/: Modelos de restricción comercial y código cerrado.
-/CONTENT-LICENSES/: Marcos jurídicos para datos, ciencia, arte y documentación.
-/creative-commons/: Variaciones desde la apertura total (CC0) hasta restricciones no comerciales.
-/open-data/: Licencias específicas para bases de datos compartidas (ODbL).
-📊 IV. Métricas de Estado del Sistema
+#🗂️ III. Estructura de Clasificación del Repositorio
+*El archivo se organiza mediante un sistema de directorios estandarizado. Cada carpeta representa una  familia o un régimen específico:
+*/SOFTWARE-LICENSES/: Contiene las licencias aplicadas al código fuente, algoritmos y sistemas operativos.
+*/permissive/: Licencias de mínima restricción (MIT, Apache, BSD).
+*/copyleft/: Licencias con cláusula de reciprocidad obligatoria (GPL, AGPL, LGPL).
+*/proprietary/: Modelos de restricción comercial y código cerrado.
+*/CONTENT-LICENSES/: Marcos jurídicos para datos, ciencia, arte y documentación.
+*/creative-commons/: Variaciones desde la apertura total (CC0) hasta restricciones no comerciales.
+*/open-data/: Licencias específicas para bases de datos compartidas (ODbL).
+#📊 IV. Métricas de Estado del Sistema
 Para garantizar que este repositorio se mantenga como un sistema plenamente actualizado, cada registro de licencia se evalúa bajo los siguientes tres indicadores de vigencia:
-Estado
-Significado Sistémico
-Aplicación en la Tierra
-🟢 ACTIVO
+*Estado
+#Significado Sistémico
+#Aplicación en la Tierra
+*🟢 ACTIVO
 Norma plenamente vigente y optimizada para tecnologías contemporáneas.
 Recomendado para nuevos despliegues.
-🟡 LEGADO
+*🟡 LEGADO
 Norma válida pero redactada para infraestructuras tecnológicas anteriores.
 Mantenimiento de sistemas antiguos.
-🔴 OBSOLETO
+*🔴 OBSOLETO
 Norma con vulnerabilidades legales o reemplazada por versiones superiores.
 No recomendado.
 
-🛰️ V. Protocolo de Actualización y Registro
+#🛰️ V. Protocolo de Actualización y Registro
 Este sistema es dinámico. Las nuevas regulaciones o modificaciones de licencias terrestres deben integrarse siguiendo el estándar de identificadores SPDX (Software Package Data Exchange). Toda adición debe incluir su archivo de metadatos manifest.json para mantener la legibilidad de máquina y la automatización del archivo.
 Este documento es un reflejo del ordenamiento técnico de la Tierra. Última sincronización global del sistema: Año 2026.
