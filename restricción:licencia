@@ -1,0 +1,73 @@
+
+1. El Texto del Manifiesto de Restricción: license.txt
+Este documento actúa como la plantilla estándar para declarar código cerrado. Prohíbe explícitamente cualquier tipo de copia, distribución, ingeniería inversa o uso comercial no autorizado por la corporación o entidad propietaria.
+
+PROPRIETARY AND COMMERCIAL RESTRICTED LICENSE MANIFEST
+
+All Rights Reserved.
+
+Copyright (c) 2026 Private Entity / Corporate Author.
+
+This software and its associated documentation are proprietary, confidential, 
+and constitute valuable trade secrets of the owner. Unauthorized copying, 
+distribution, modification, reverse engineering, or public performance of 
+this software, via any medium, is strictly prohibited.
+
+TERMS OF RESTRICTION:
+
+1. No Distribution: You may not distribute, rent, lease, lend, sell, or 
+   sublicense the software to any third party.
+2. No Modification: You may not alter, merge, modify, adapt, or translate 
+   the software, nor decompile, disassemble, or reverse engineer its source code.
+3. Limited Use: Access to the executable binary forms is strictly limited to 
+   authorized environments under explicit End User License Agreements (EULA).
+
+ANY UNAUTHORIZED USE WILL RESULT IN IMMEDIATE TERMINATION OF ACCESS AND LEGAL 
+ACTION UNDER APPLICABLE APPLICABLE DOMESTIC AND INTERNATIONAL COPYRIGHT LAWS.
+
+
+2. La Ficha Técnica Normalizada: manifest.json
+Este archivo traduce el carácter completamente restrictivo del software propietario a variables lógicas booleanas (false en casi todos los permisos), permitiendo que tus sistemas automatizados identifiquen instantáneamente un régimen de código cerrado.
+
+{
+  "$schema": "https://json-schema.org",
+  "identificador_sistema": {
+    "id_spdx": "LicenseRef-Commercial-Restricted",
+    "nombre_oficial": "Proprietary Commercial Restricted License",
+    "version": "1.0",
+    "estado_vigencia": "ACTIVO"
+  },
+  "genealogia": {
+    "licencia_padre": "Copyright Tradicional de la Tierra",
+    "ano_lanzamiento": 1976,
+    "entidad_emisora": "Sistemas Corporativos y Privados",
+    "bifurcaciones_o_descendientes": []
+  },
+  "matriz_de_reglas": {
+    "permisos": {
+      "uso_comercial": false,
+      "modificacion_codigo": false,
+      "distribucion_copias": false,
+      "sublicenciar": false,
+      "uso_en_red_cloud": false
+    },
+    "condiciones": {
+      "incluir_aviso_copyright": true,
+      "incluir_texto_licencia": true,
+      "divulgar_codigo_fuente": false,
+      "rastrear_cambios_realizados": false
+    },
+    "limitaciones": {
+      "garantia_legal_incluida": false,
+      "responsabilidad_danos": true,
+      "uso_marcas_comerciales": true
+    }
+  },
+  "metadatos_sincronizacion": {
+    "es_compatible_con_gpl_v3": false,
+    "tipo_codigo_fuente": "Código Cerrado / Privado Restringido",
+    "ultima_verificacion_terrestre": "2026-08-28"
+  }
+}
+
+ 
