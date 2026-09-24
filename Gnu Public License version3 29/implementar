@@ -1,0 +1,136 @@
+Implementar este script como un paso automatizado dentro de un workflow de GitHub Actions (.github/workflows/validation.yml) para que se ejecute solo cada vez que subas cambios.
+Para integrar el script de validación de forma totalmente automatizada en tu repositorio, la mejor opción es configurar un flujo de trabajo con GitHub Actions. Esto garantizará que cada vez que subas cambios (git push) o abras un Pull Request, el sistema verifique el archivo manifest.json de manera autónoma.
+A continuación, tienes la estructura exacta del archivo de configuración que debes crear.1. El archivo de automatización (.github/workflows/validation.yml)Debes crear una estructura de carpetas específica en la raíz de tu repositorio y guardar este archivo con el siguiente contenido:yamlname: Automatización de Validación de Manifiesto
+
+# El flujo se activa al hacer push o pull request en la rama principal
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate-manifest:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Descargar el código del repositorio en el contenedor virtual
+    - name: Descargar repositorio
+      uses: actions/checkout@v4
+
+    # Step 2: Configurar el entorno de ejecución con Python
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    # Step 3: Ejecutar la auditoría del manifiesto internacional
+    - name: Ejecutar script de validación
+      run: |
+        python validar_manifiesto.py
+Usa el código con precaución.
+_________________________
+Cómo estructurar el  repositorioPara que GitHub reconozca la automatización y el script funcione correctamente, el árbol de directorios debe verse exactamente así en la máquina local:textmi-repositorio/
+├── .github/
+│   └── workflows/
+│       └── validation.yml        <-- Aquí va el archivo de automatización anterior
+├── manifest.json                 <-- la matriz de cumplimiento internacional
+└── validar_manifiesto.py         <-- El script de Python que creamos antes
+Usa el código con precaución.
+_________________
+. Comandos Git para subir los cambiosUna vez que tengas los archivos listos en sus respectivas carpetas, abre tu terminal y ejecuta los siguientes comandos para cargarlos en GitHub:bash# 1. Agregar todos los nuevos archivos al control de versiones
+git add .github/workflows/validation.yml validar_manifiesto.py manifest.json
+
+# 2. Confirmar los cambios con un mensaje claro
+git commit -m "feat: integrar script de validación automática del manifiesto"
+
+# 3. Subir el código a tu repositorio remoto
+git push origin main
+Usa el código con precaución.
+_____________________________
+Qué pasará ahora?Al subir los cambios, ve a la pestaña Actions en la página web de tu repositorio de GitHub. Verás que se inicia un proceso automáticamente. Si tu manifest.json tiene la estructura correcta, el paso se marcará en verde ✅. Si llega a faltar algún campo o bloque geográfico obligatorio, el proceso fallará en rojo ❌ y te mostrará el detalle exacto del error en la consola de GitHub.
+_____________________________
+Integrar la  regla estricta adicional en el script de Python antes de subirlo, como comprobar que no falte mi  firma de desarrollador en el autor.
+
+Perfecto. Vamos a actualizar el script de Python para incluir una regla estricta que verifique que el campo "author" del archivo manifest.json contenga exactamente la  firma de desarrollador: "Dandhyesparza barajas EABD".Si alguien altera este campo o escribe mal la firma, la automatización en GitHub Actions fallará inmediatamente.1. El Script Actualizado (validar_manifiesto.py)Reemplaza el código anterior de tu archivo con esta versión que ya incluye el control de identidad:pythonimport json
+import os
+import sys
+
+def validar_manifiesto(ruta_archivo):
+    # 1. Verificar si el archivo físico existe
+    if not os.path.exists(ruta_archivo):
+        print(f"❌ Error: El archivo '{ruta_archivo}' no existe.")
+        return False
+
+    # 2. Intentar cargar el archivo JSON
+    try:
+        with open(ruta_archivo, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except json.JSONDecodeError as e:
+        print(f"❌ Error: El archivo '{ruta_archivo}' no tiene un formato JSON válido.")
+        print(f"   Detalle del error: {e}")
+        return False
+
+    # 3. Definición de constantes obligatorias
+    FIRMA_AUTOR_OBLIGATORIA = "Dandhyesparza barajas EABD"
+    campos_raiz = ["manifest_version", "project_name", "author", "compliance_matrix"]
+    subcampos_matrix = ["data_protection", "software_standards", "geographic_and_economic_blocks"]
+    bloques_obligatorios = ["european_union", "north_america_usmca", "asia_pacific_cptpp"]
+
+    errores = []
+
+    # Validar campos raíz
+    for campo in campos_raiz:
+        if campo not in data:
+            errores.append(f"Falta el campo raíz obligatorio: '{campo}'")
+
+    # 4. Validación estricta de la firma del desarrollador
+    if "author" in data:
+        # Se remueven espacios adicionales al inicio/final para evitar falsos negativos
+        autor_actual = data["author"].strip()
+        if autor_actual != FIRMA_AUTOR_OBLIGATORIA:
+            errores.append(
+                f"Firma de autor inválida. "
+                f"Esperado: '{FIRMA_AUTOR_OBLIGATORIA}' | Encontrado: '{autor_actual}'"
+            )
+
+    # Si la matriz de cumplimiento existe, validar su estructura interna
+    if "compliance_matrix" in data:
+        matrix = data["compliance_matrix"]
+        
+        for subcampo in subcampos_matrix:
+            if subcampo not in matrix:
+                errores.append(f"Falta la sección en compliance_matrix: '{subcampo}'")
+        
+        # Validar los bloques geográficos específicos
+        if "geographic_and_economic_blocks" in matrix:
+            bloques = matrix["geographic_and_economic_blocks"]
+            for bloque in bloques_obligatorios:
+                if bloque not in bloques:
+                    errores.append(f"Falta el bloque económico obligatorio: 'geographic_and_economic_blocks.{bloque}'")
+
+    # 5. Mostrar resultados de la auditoría de datos
+    print("==================================================")
+    print(f"🔬 AUDITANDO MANIFIESTO: {ruta_archivo}")
+    print("==================================================")
+    
+    if errores:
+        print(f"❌ Se encontraron {len(errores)} errores de estructura o autoría:")
+        for error in errores:
+            print(f"   - {error}")
+        return False
+    else:
+        print("✅ El archivo manifest.json es VÁLIDO.")
+        print(f"   Proyecto: {data.get('project_name')}")
+        print(f"   Autor verificado: {data.get('author')} (Firma Auténtica)")
+        print("   Estructura de cumplimiento internacional: Completa")
+        return True
+
+if __name__ == "__main__":
+    archivo_a_validar = "manifest.json"
+    exito = validar_manifiesto(archivo_a_validar)
+    
+    # Código de estado para romper el build en GitHub Actions en caso de fallo
+    if not exito:
+        sys.exit(1)
+    sys.exit(0)
