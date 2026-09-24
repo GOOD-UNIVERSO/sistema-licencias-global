@@ -1,0 +1,79 @@
+El Script de Validación (validar_manifiesto.py)
+python
+import json
+import os
+import sys
+
+def validar_manifiesto(ruta_archivo):
+    # 1. Verificar si el archivo físico existe
+    if not os.path.exists(ruta_archivo):
+        print(f"❌ Error: El archivo '{ruta_archivo}' no existe.")
+        return False
+
+    # 2. Intentar cargar el archivo JSON
+    try:
+        with open(ruta_archivo, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except json.JSONDecodeError as e:
+        print(f"❌ Error: El archivo '{ruta_archivo}' no tiene un formato JSON válido.")
+        print(f"   Detalle del error: {e}")
+        return False
+
+    # 3. Definir la estructura mínima obligatoria
+    campos_raiz = ["manifest_version", "project_name", "author", "compliance_matrix"]
+    subcampos_matrix = ["data_protection", "software_standards", "geographic_and_economic_blocks"]
+    bloques_obligatorios = ["european_union", "north_america_usmca", "asia_pacific_cptpp"]
+
+    errores = []
+
+    # Validar campos raíz
+    for campo in campos_raiz:
+        if campo not in data:
+            errores.append(f"Falta el campo raíz obligatorio: '{campo}'")
+
+    # Si la matriz de cumplimiento existe, validar su estructura interna
+    if "compliance_matrix" in data:
+        matrix = data["compliance_matrix"]
+        
+        for subcampo in subcampos_matrix:
+            if subcampo not in matrix:
+                errores.append(f"Falta la sección en compliance_matrix: '{subcampo}'")
+        
+        # Validar los bloques geográficos específicos
+        if "geographic_and_economic_blocks" in matrix:
+            bloques = matrix["geographic_and_economic_blocks"]
+            for bloque in bloques_obligatorios:
+                if bloque not in bloques:
+                    errores.append(f"Falta el bloque económico obligatorio: 'geographic_and_economic_blocks.{bloque}'")
+
+    # 4. Mostrar resultados de la auditoría de datos
+    print("==================================================")
+    print(f"🔬 AUDITANDO MANIFIESTO: {ruta_archivo}")
+    print("==================================================")
+    
+    if errores:
+        print(f"❌ Se encontraron {len(errores)} errores de estructura:")
+        for error in errores:
+            print(f"   - {error}")
+        return False
+    else:
+        print("✅ El archivo manifest.json es VÁLIDO.")
+        print(f"   Proyecto: {data.get('project_name')}")
+        print(f"   Autor: {data.get('author')}")
+        print("   Estructura de cumplimiento internacional: Completa")
+        return True
+
+if __name__ == "__main__":
+    # Por defecto busca manifest.json en el mismo directorio
+    archivo_a_validar = "manifest.json"
+    
+    exito = validar_manifiesto(archivo_a_validar)
+    
+    # Salida con código de estado para pipelines de automatización
+    if not exito:
+        sys.exit(1)
+    sys.exit(0)
+
+Aquí tienes un script de validación en Python diseñado específicamente para verificar de manera automatizada que tu archivo manifest.json contenga la estructura jerárquica de cumplimiento, los bloques económicos y los formatos obligatorios que acabamos de definir.
+Este script analiza el archivo, verifica la existencia de cada sección e indica con precisión si falta algún campo o si todo está en orden.
+
