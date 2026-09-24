@@ -1,0 +1,28 @@
+graph TD
+
+classDef default fill:#14191f,stroke:#30363d,stroke-width:2px,color:#c9d1d9;
+classDef active fill:#1a3222,stroke:#238636,stroke-width:2px,color:#7ee787;
+classDef legacy fill:#382716,stroke:#9e6a03,stroke-width:2px,color:#f2cc60;
+
+ROOT[Matriz Legal: Propiedad Intelectual] --> CR[Copyright Tradicional: Todo reservado]
+ROOT --> CO[Copyleft / Cultura Libre: Derechos compartidos]
+
+CO --> PER[Línea Permisiva / Académica]
+CO --> REC[Línea Recíproca / Hereditaria]
+
+%% Descendencia Permisiva
+PER --> BSD[Familia BSD: 1988]
+BSD --> MIT[MIT License: Estándar Global]:::active
+BSD --> APACHE1[Apache 1.1: Legado]:::legacy
+APACHE1 --> APACHE2[Apache 2.0: Protección de Patentes]:::active
+
+%% Descendencia Recíproca
+REC --> GPL1[GPL v1: 1989]:::legacy
+GPL1 --> GPL2[GPL v2: Linux / Infraestructura]:::active
+GPL2 --> GPL3[GPL v3: Era Moderna]:::active
+GPL2 --> AGPL3[AGPL v3: Interfaz de Red / Cloud]:::active
+
+%% Contenido
+ROOT --> CC[Creative Commons: Contenido y Documentación]
+CC --> CC0[CC0: Dominio Público]:::active
+CC --> CCBY[CC BY 4.0: Atribución Internacional]:::active
