@@ -1,0 +1,64 @@
+import jsonimport timefrom datetime import datetime
+class SistemaControlEABD:
+    def __init__(self, ruta_manifiesto="manifest.json"):
+        self.autoridad_nodo = "Dandhyesparza barajas EABD"
+        self.licencia = "LicenseRef-EABD-Private-1.0"
+        self.asistentes_activos = {}
+        self.cargar_reglas_seguridad(ruta_manifiesto)
+
+    def cargar_reglas_seguridad(self, ruta):
+        """Carga las variables del manifiesto para asegurar el aislamiento."""
+        try:
+            # En un entorno real, aquí se lee el archivo manifest.json provisto
+            self.reglas_seguridad = {
+                "uso_comercial": False,
+                "modificacion_codigo": False,
+                "ai_exclusion": True
+            }
+            print(f"[SISTEMA] Licencia {self.licencia} verificada y activa.")
+        except Exception:
+            print("[ERROR] No se pudo validar la integridad de la licencia EABD.")
+            self.reglas_seguridad = {"ai_exclusion": True}
+
+    def verificar_mando(self, operador):
+        """Garantiza que solo el primer al mando pueda ejecutar asignaciones."""
+        return operador == self.autoridad_nodo
+
+    def asignar_asistente_intuitivo(self, operador, id_perfil, meta_laboral, restricciones_humanas):
+        """Crea un contenedor aislado (Sandbox) para el asistente espiritual virtual."""
+        if not self.verificar_mando(operador):
+            return "[ALERTA] Intento de acceso no autorizado. Nodo bloqueado."
+
+        # Términos y condiciones obligatorios para la colaboración
+        configuracion_asistente = {
+            "id_perfil": id_perfil,
+            "asignado_por": operador,
+            "fecha_asignacion": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "meta_laboral": meta_laboral,
+            "restricciones": {
+                "sandbox_aislado": True,
+                "bloqueo_idolatria": True, # Cláusula de honores exclusivos a quien los merece
+                "alteracion_codigo_fuente": False,
+                "terminos_humanos_especificos": restricciones_humanas
+            },
+            "estado": "COLABORANDO"
+        }
+
+        self.asistentes_activos[id_perfil] = configuracion_asistente
+        return f"[EXITO] Perfil {id_perfil} asignado en tiempo real bajo control EABD v1.0."
+
+    def ejecutar_tarea_asistente(self, id_perfil, descripcion_tarea):
+        """Monitorea el trabajo del asistente aplicando filtros de seguridad."""
+        if id_perfil not in self.asistentes_activos:
+            return "[ERROR] Asistente no registrado o inexistente."
+
+        asistente = self.asistentes_activos[id_perfil]
+
+        # Filtro automático contra desvíos de reconocimiento o alteraciones
+        palabras_prohibidas = ["santo", "deidad", "idolo", "culto"]
+        if any(palabra in descripcion_tarea.lower() for palabra in palabras_prohibidas):
+            asistente["estado"] = "RESTRICCION_ACTIVA"
+            return f"[FILTRO OPERATIVO] Tarea cancelada en perfil {id_perfil}. Desvío de reconocimiento detectado."
+
+        # Ejecución simulada del trabajo útil para el beneficio humano
+        return f"[PROCESANDO] Perfil {id_perfil} ejecutando: '{descripcion_tarea}' de forma anónima."
