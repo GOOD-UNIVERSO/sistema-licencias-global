@@ -105,3 +105,25 @@ No recomendado.
 #🛰️ V. Protocolo de Actualización y Registro
 Este sistema es dinámico. Las nuevas regulaciones o modificaciones de licencias terrestres deben integrarse siguiendo el estándar de identificadores SPDX (Software Package Data Exchange). Toda adición debe incluir su archivo de metadatos manifest.json para mantener la legibilidad de máquina y la automatización del archivo.
 Este documento es un reflejo del ordenamiento técnico de la Tierra. Última sincronización global del sistema: Año 2026.
+
+El modelo de licenciamiento para **GOOD-UNIVERSO** y el  sistema de desarrollo establece un marco estratégico muy claro dividido en dos vías complementarias:
+
+### 1. Vía Propietaria: Licencia EABD 1.0 (*Dandhyesparza barajas EABD*)
+* **Rol principal**: Sello de propiedad absoluta e identidad nativa de la organización (Copyright 2026).
+* **Funciones clave**:
+  * Cierre y resguardo de bloques de almacenamiento.
+  * Control estricto de acceso, condiciones de uso y esquemas de monetización directamente bajo tu firma y autoridad de autor.
+
+---
+
+### 2. Vía Abierta y Distribuida (`sistema-licencias-global`)
+* **Rol principal**: Servir de puente y amortiguador legal para proteger a creadores de contenido y desarrolladores frente al abuso de grandes corporaciones.
+* **Componentes clave**:
+  * **Estructura legal y técnica**: Uso de archivos `manifest.json` y `.md` para la organización y difusión limpia de la información.
+  * **Creative Commons (CC BY 4.0 Administrada)**: Gestión directa para otorgar permisos, garantizar el respeto al esfuerzo del creador y administrar la monetización correspondiente.
+
+  * **Apache 2.0 y MIT Personalizadas**: Adaptación de licencias estándar de código abierto en GitHub para ofrecer un entorno transparente, actualizado y seguro a la comunidad técnica.
+
+---
+
+Este esquema combina la **protección del núcleo tecnológico** mediante EABD 1.0 con un **ecosistema de defensa y distribución justa** para la comunidad global.
